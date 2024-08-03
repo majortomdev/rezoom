@@ -1,10 +1,11 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+from rest_framework import viewsets
+from .models import User, UrlObject
+from .serializers import UserSerialiazer, UrlobjectSerializer
 
-# Create your views here.
-# request -> response
-# request handler
-# action
+class UserViewSet(viewsets.ModelViewSet):
+        queryset = User.objects.all()
+        serializer_class = UserSerialiazer
 
-def say_hello(request):
-    return HttpResponse('Hello World')
+class UrlobjectViewSet(viewsets.ModelViewSet):
+        queryset = UrlObject.objects.all()
+        serializer_class=UrlobjectSerializer
