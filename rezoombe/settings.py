@@ -36,8 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'urlobject',
-    'user'
+    'urlobject'
 ]
 
 MIDDLEWARE = [
@@ -78,6 +77,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'rzdb',
+        'USER':'postgres',
         'PASSWORD': 'Net_25',
         'HOST': 'localhost',
         'PORT': '5432'
